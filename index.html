@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/4218b23103.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="popup">
+            <button class="exitButton"><i class="fa-solid fa-xmark"></i></button>
+            <div class="formHeading">
+                <h1>Add Book</h1>
+            </div>
+            <form action="#" id="form" class="form">
+                <div class="form-control">
+                    <input class="formTitle" required type="text">
+                    <label>Title </label>
+                </div>
+                <div class="form-control">
+                    <input class='formAuthor'required type="text">
+                    <label>Author </label>
+                </div>
+                <div class="form-control">
+                    <input required class="formPages" type="number">
+                    <label >Pages </label>
+                </div>
+                <div>
+                    <label>Already Read?</label>
+                    <input type="checkbox" class="formRead">
+                </div>
+                <button class="submitForm" type="submit">Submit</button>
+            </form>
+        </div>
+    <div class="heading">
+        <div class="title">Library</div>
+        <div class="login"><button>Log In</button></div>
+    </div>
+    <div class="container">
+        <div class="btn"><button class="newBook">New Book</button></div>
+        <div class="book-container">
+        </div>
+    </div>
+    
+</body>
+</html>

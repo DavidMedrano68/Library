@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&family=Nunito:ital,wght@1,300&display=swap');
+*{
+    font-family: 'DynaPuff', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --form-color: #E0E9EB;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+}
+.heading{
+    grid-column: span 2;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0px 3px 2px #E2E6E7;
+    border: solid;
+}
+.login{
+    justify-self: end;
+}
+.heading div{
+    padding: 5px;
+}
+.container{
+    padding: 10px;
+    grid-column: span 2;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+}
+.btn{
+    justify-self: center;
+}
+.book-container{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.book{
+    margin: 5px;
+    box-shadow: 3px 3px 2px var(--form-color);
+    padding: 5px;
+    height: 250px;
+    background-color:rgba(160,160,160,0.65);
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+button{
+    background: rgba(0, 0, 0, 0.2);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding:10px;
+    border-radius: 5px;
+}
+.green{
+    background-color: rgba(0, 255, 0, 0.6);
+}
+.red{
+    background-color: rgba(255, 0, 0, .5);
+}
+.popup{
+    background-color: var(--form-color);
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    visibility: hidden;
+    transition: transform 0.6ms, top 0.6s;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+.exitButton{
+    position: absolute;
+    left: 0;
+    top:0;
+    padding: 0 5px;
+}
+input{
+    outline: transparent;
+    border: none;
+    
+}
+.heading .title{
+    font-size: 30px;
+}
+.book .title{
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-size: 25px;
+}
+.form-control{
+    position: relative;
+    margin: 10px;
+}
+.form-control input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.55);
+    border-radius: 3px;
+    background: var(--form-color);
+    color: rgba(0, 0, 0, 0.55);
+}
+.form-control label{
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    padding: 4px;
+    transition: 0.5s;
+}
+.form-control input:valid ~ label,
+.form-control input:focus ~ label{
+transform: translate(5px)translateY(-7px);
+font-size: 14px;
+padding: 0 10px;
+background-color: var(--form-color);
+}
