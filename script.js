@@ -105,8 +105,4 @@ Book.prototype.makeBookDiv=function(){
     bookObj.appendChild(removeButton);
     bookContainer.appendChild(bookObj)
     console.log(library)
-}
-const Harry = new Book('harrypotter','jkroweling',245,
-false)
-Harry.addBook()
-Harry.makeBookDiv()
+};
