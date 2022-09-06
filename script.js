@@ -38,19 +38,21 @@ function displayForm(){
     popup.classList.add('open-popup')
 }
 
-function Book(title,author,pages,read){
+class Book{
+
+    constructor(title,author,pages,read){
     this.title = title
     this.author = author
     this.pages = pages
     this.read = read
 }
-Book.prototype.addBook = function(){
+addBook(){
     library.push(this)
 }
-Book.prototype.switchBool = function(){
+switchBool(){
     this.read = !this.read
 }
-Book.prototype.changeReadButton = function(event){
+changeReadButton(event){
     if(this.read === true){
         event.textContent = 'Read';
         event.className='green'
@@ -61,7 +63,7 @@ Book.prototype.changeReadButton = function(event){
     }
 }
 
-Book.prototype.makeBookDiv=function(){
+makeBookDiv(){
     let bookObj = document.createElement('div')
     bookObj.setAttribute('class','book')
     let divTitle =document.createElement('div')
@@ -105,4 +107,5 @@ Book.prototype.makeBookDiv=function(){
     bookObj.appendChild(removeButton);
     bookContainer.appendChild(bookObj)
     console.log(library)
-};
+}
+}
